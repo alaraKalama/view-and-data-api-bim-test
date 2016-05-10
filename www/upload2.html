@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>ADN Viewer Demo (client upload)</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/upload2.css">
+    <link href="https://npmcdn.com/basscss@8.0.1/css/basscss.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/concise.css">
+
+
+    <!-- Autodesk.ADN.Toolkit.Viewer -->
+    <script src=" https://rawgit.com/Developer-Autodesk/library-javascript-view.and.data.api/master/js/Autodesk.ADN.Toolkit.ViewData.js"></script>
+    <script src="/upload.js"></script>
+</head>
+
+<body>
+<!--second-->
+    <div class="fileUpload">
+        <span class="custom-span">+</span>
+        <p class="custom-para">Add Project</p>
+        <input id="uploadBtn" type="file" class="upload" />
+    </div>
+    <input id="uploadFile" placeholder="0 files selected" disabled="disabled" />
+    <br/>
+    <br/>
+
+    <div>
+        <a class="btn btn-primary" id="btnTranslateThisOne">Translate this one for me</a>
+    </div>
+    <br/>
+    <br/>
+
+    <div id="msg"></div>
+</body>
+</html>

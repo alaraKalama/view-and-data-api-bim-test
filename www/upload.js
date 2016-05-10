@@ -1,13 +1,18 @@
 var oViewDataClient =null ;
 
 $(document).ready (function () {
+
+    document.getElementById("uploadBtn").onchange = function () {
+        document.getElementById("uploadFile").value = this.value;
+    };
+
     oViewDataClient =new Autodesk.ADN.Toolkit.ViewData.AdnViewDataClient (
         'https://developer.api.autodesk.com',
         'http://' + window.location.host + '/api/token'
     ) ;
 
     $('#btnTranslateThisOne').click (function (evt) {
-        var files =document.getElementById('files').files ;
+        var files =document.getElementById('uploadFile').files ;
         if ( files.length == 0 )
             return ;
         var bucket =
@@ -23,7 +28,7 @@ $(document).ready (function () {
         if ( urn == '' )
             return ;
         AddThisOne (urn) ;
-    }) ;
+    });
 }) ;
 
 function AddThisOne (urn) {
